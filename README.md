@@ -28,17 +28,19 @@ Using environment highly recomended, so
 
 Assume cbp is folder with project files
 
-<cd cd cbp/>
+```
+cd cd cbp/
 
-<python3 -m venv cbp>
+python3 -m venv cbp
 
-<source cbp/bin/activate>
+source cbp/bin/activate
 
-<pip install -r requirements.txt>
-
+pip install -r requirements.txt
+```
 run
-
-<python coinbaseapidemo.py>
+```
+python coinbaseapidemo.py
+```
 
 Open browser to https://127.0.0.1:5000/
 
