@@ -1,7 +1,7 @@
 # coinbase-api-demo
 coinbase-api-demo
 
-This project show using Coinbase API
+##This project show using Coinbase API
 
 Based on coinbase-commerce-python,
 
@@ -26,19 +26,19 @@ Please clone or download project.
 
 Using environment highly recomended, so
 
-supposing cbp is folder with project files
+Assume cbp is folder with project files
 
-cd cd cbp/
+I cd cd cbp/
 
-python3 -m venv cbp
+I python3 -m venv cbp
 
-source cbp/bin/activate
+I source cbp/bin/activate
 
-pip install -r requirements.txt
+I pip install -r requirements.txt
 
 run
 
-python coinbaseapidemo.py
+I python coinbaseapidemo.py
 
 Open browser to https://127.0.0.1:5000/
 
