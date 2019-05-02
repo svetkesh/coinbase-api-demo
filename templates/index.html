@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Coinbase API demo</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <script type="text/javascript">
+       $(document).ready(function() {
+           $('form').on('submit', function(event) {
+             $.ajax({
+                data : {
+                       api_key : $('#api_key').val(),
+                       name : $('#name').val(),
+                       description: $('#description').val(),
+                       amount: $('#amount').val(),
+                        },
+                   type : 'POST',
+                   url : '/charge',
+                  })
+
+              .done(function(data) {
+                $('#output').text(data.output).show();
+            });
+            event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+  <div class="container">
+	<h1>Coinbase API demo</h1>
+  <hr>
+  <div class="">
+    <h2>Here you can make new <b>charge</b> via
+      <a href="https://commerce.coinbase.com">Coinbase</a>
+       or query for completed charges</h2>
+
+  </div>
+  <hr>
+
+  <form class="form-inline">
+
+  <div class="container">
+    <div class="">
+
+
+    <p>Please fill in with Your API_KEY to proceed with queries.</p>
+  <!--API_KEY-->
+  <div class="form-group">
+  <label for="api_key">API_KEY</label>
+  <input type="text" class="form-control" name="api_key" id="api_key" placeholder="API_KEY">
+  </div>
+  </div>
+  </div>
+
+  <div class="container">
+      <hr>
+  <p>If You wish just <i>query</i> for successfully completed charges
+  please leave next fields blank</p>
+
+  <p>To create new <i>charge</i> please fill in other next fields:</p>
+  </div>
+  <br>
+
+  <div class="container">
+
+
+  <div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+  </div>
+  <br>
+  <!--description-->
+  <div class="form-group">
+  <label for="description">Description</label>
+  <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+  </div>
+  <br>
+  <!--amount-->
+  <div class="form-group">
+  <label for="amount">Amount in USD</label>
+  <input type="text" class="form-control" id="amount" name="amount" placeholder="9.99">
+  </div>
+
+  <!--Submit Button-->
+  <hr>
+  <button id="demo" type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <hr>
+
+  <div id="output"></div>
+
+  </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
