@@ -3,6 +3,8 @@ coinbase-api-demo
 
 **This project show using Coinbase API**
 
+![](https://github.com/svetkesh/coinbase-api-demo/blob/master/screenshots/Screenshot%20at%202019-05-02%2003-14-15.png)
+
 Based on coinbase-commerce-python,
 
 https://github.com/coinbase/coinbase-commerce-python
