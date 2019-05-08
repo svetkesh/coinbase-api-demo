@@ -1,7 +1,7 @@
 # coinbase-api-demo
 coinbase-api-demo
 
-##This project show using Coinbase API
+**This project show using Coinbase API**
 
 Based on coinbase-commerce-python,
 
